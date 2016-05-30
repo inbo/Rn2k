@@ -76,7 +76,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/magrittr_1.5.tar.gz \
   && R CMD INSTALL magrittr_1.5.tar.gz \
   && rm magrittr_1.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/stringi_1.0-1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/stringi_1.0-1.tar.gz \
   && R CMD INSTALL stringi_1.0-1.tar.gz \
   && rm stringi_1.0-1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/stringr_1.0.0.tar.gz \
