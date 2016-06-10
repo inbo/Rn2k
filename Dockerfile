@@ -133,7 +133,7 @@ RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.4.tar.gz \
   && rm dplyr_0.4.3.tar.gz
 
 ## Install plyr
-RUN wget https://cran.rstudio.com/src/contrib/plyr_1.8.3.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/plyr/plyr_1.8.3.tar.gz \
   && R CMD INSTALL plyr_1.8.3.tar.gz \
   && rm plyr_1.8.3.tar.gz
 
