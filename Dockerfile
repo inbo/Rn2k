@@ -119,7 +119,7 @@ RUN wget https://cran.rstudio.com/src/contrib/assertthat_0.1.tar.gz \
 RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.4.tar.gz \
   && R CMD INSTALL Rcpp_0.12.4.tar.gz \
   && rm Rcpp_0.12.4.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/lazyeval_0.1.10.tar.gz\
+  && wget https://cran.rstudio.com/src/contrib/Archive/lazyeval/lazyeval_0.1.10.tar.gz\
   && R CMD INSTALL lazyeval_0.1.10.tar.gz \
   && rm lazyeval_0.1.10.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/DBI_0.4-1.tar.gz \
