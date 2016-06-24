@@ -100,7 +100,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/rstudioapi_0.5.tar.gz \
   && R CMD INSTALL rstudioapi_0.5.tar.gz \
   && rm rstudioapi_0.5.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/withr_1.0.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/withr/withr_1.0.1.tar.gz \
   && R CMD INSTALL withr_1.0.1.tar.gz \
   && rm withr_1.0.1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/devtools_1.11.1.tar.gz \
