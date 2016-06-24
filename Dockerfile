@@ -85,7 +85,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/openssl/openssl_0.9.3.tar.gz \
   && R CMD INSTALL openssl_0.9.3.tar.gz \
   && rm openssl_0.9.3.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/httr_1.1.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/httr/httr_1.1.0.tar.gz \
   && R CMD INSTALL httr_1.1.0.tar.gz \
   && rm httr_1.1.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/git2r/git2r_0.14.0.tar.gz \
