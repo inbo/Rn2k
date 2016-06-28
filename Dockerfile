@@ -155,7 +155,7 @@ RUN apt-get update \
   && rm RODBC_1.3-13.tar.gz
 
 ## Install testthat and dependencies
-RUN wget https://cran.rstudio.com/src/contrib/crayon_1.3.1.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/crayon/crayon_1.3.1.tar.gz \
   && R CMD INSTALL crayon_1.3.1.tar.gz \
   && rm crayon_1.3.1.tar.gz \
   && wget https://github.com/cran/praise/archive/1.0.0.tar.gz \
