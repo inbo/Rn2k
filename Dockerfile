@@ -97,7 +97,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/whisker_0.3-2.tar.gz \
   && R CMD INSTALL whisker_0.3-2.tar.gz \
   && rm whisker_0.3-2.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/rstudioapi_0.5.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/rstudioapi/rstudioapi_0.5.tar.gz \
   && R CMD INSTALL rstudioapi_0.5.tar.gz \
   && rm rstudioapi_0.5.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/withr/withr_1.0.1.tar.gz \
