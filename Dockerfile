@@ -61,7 +61,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/jsonlite/jsonlite_0.9.19.tar.gz \
   && R CMD INSTALL jsonlite_0.9.19.tar.gz \
   && rm jsonlite_0.9.19.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/mime_0.4.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/mime/mime_0.4.tar.gz \
   && R CMD INSTALL mime_0.4.tar.gz \
   && rm mime_0.4.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/curl_0.9.7.tar.gz \
