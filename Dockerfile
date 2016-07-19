@@ -214,7 +214,7 @@ RUN wget https://github.com/cran/numDeriv/archive/2014.2-1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/setRNG_2013.9-1.tar.gz \
   && R CMD INSTALL setRNG_2013.9-1.tar.gz \
   && rm setRNG_2013.9-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/dfoptim_2011.8-1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/dfoptim/dfoptim_2011.8-1.tar.gz \
   && R CMD INSTALL dfoptim_2011.8-1.tar.gz \
   && rm dfoptim_2011.8-1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/svUnit_0.7-12.tar.gz \
