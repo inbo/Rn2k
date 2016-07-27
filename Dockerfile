@@ -64,7 +64,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/mime/mime_0.4.tar.gz \
   && R CMD INSTALL mime_0.4.tar.gz \
   && rm mime_0.4.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/curl_0.9.7.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/curl/curl_0.9.7.tar.gz \
   && R CMD INSTALL curl_0.9.7.tar.gz \
   && rm curl_0.9.7.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/digest_0.6.9.tar.gz \
