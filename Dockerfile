@@ -122,7 +122,7 @@ RUN wget https://cran.rstudio.com/src/contrib/Archive/Rcpp/Rcpp_0.12.4.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/lazyeval/lazyeval_0.1.10.tar.gz\
   && R CMD INSTALL lazyeval_0.1.10.tar.gz \
   && rm lazyeval_0.1.10.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/DBI_0.4-1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/DBI/DBI_0.4-1.tar.gz \
   && R CMD INSTALL DBI_0.4-1.tar.gz \
   && rm DBI_0.4-1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/BH_1.60.0-2.tar.gz \
