@@ -193,7 +193,7 @@ RUN wget https://github.com/cran/minqa/archive/1.2.4.tar.gz \
 RUN wget https://github.com/cran/numDeriv/archive/2014.2-1.tar.gz \
   && R CMD INSTALL 2014.2-1.tar.gz \
   && rm 2014.2-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/optextras_2013-10.28.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/optextras/optextras_2013-10.28.tar.gz \
   && R CMD INSTALL optextras_2013-10.28.tar.gz \
   && rm optextras_2013-10.28.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Rvmmin_2013-11.12.tar.gz \
