@@ -208,7 +208,7 @@ RUN wget https://github.com/cran/numDeriv/archive/2014.2-1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/BB_2014.10-1.tar.gz \
   && R CMD INSTALL BB_2014.10-1.tar.gz \
   && rm BB_2014.10-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/ucminf_1.1-3.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/ucminf/ucminf_1.1-3.tar.gz \
   && R CMD INSTALL ucminf_1.1-3.tar.gz \
   && rm ucminf_1.1-3.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/setRNG_2013.9-1.tar.gz \
