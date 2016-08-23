@@ -182,7 +182,7 @@ RUN wget https://github.com/cran/minqa/archive/1.2.4.tar.gz \
   && wget https://github.com/cran/nloptr/archive/1.0.4.tar.gz \
   && R CMD INSTALL 1.0.4.tar.gz \
   && rm 1.0.4.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/RcppEigen_0.3.2.8.1.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/RcppEigen/RcppEigen_0.3.2.8.1.tar.gz \
   && R CMD INSTALL RcppEigen_0.3.2.8.1.tar.gz \
   && rm RcppEigen_0.3.2.8.1.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/lme4_1.1-12.tar.gz \
