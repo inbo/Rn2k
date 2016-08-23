@@ -79,7 +79,7 @@ RUN apt-get update \
   && wget https://cran.rstudio.com/src/contrib/Archive/stringi/stringi_1.0-1.tar.gz \
   && R CMD INSTALL stringi_1.0-1.tar.gz \
   && rm stringi_1.0-1.tar.gz \
-  && wget https://cran.rstudio.com/src/contrib/stringr_1.0.0.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/stringr/stringr_1.0.0.tar.gz \
   && R CMD INSTALL stringr_1.0.0.tar.gz \
   && rm stringr_1.0.0.tar.gz \
   && wget https://cran.rstudio.com/src/contrib/Archive/openssl/openssl_0.9.3.tar.gz \
