@@ -138,7 +138,7 @@ RUN wget https://cran.rstudio.com/src/contrib/Archive/plyr/plyr_1.8.3.tar.gz \
   && rm plyr_1.8.3.tar.gz
 
 ## Install lubridate
-RUN wget https://cran.rstudio.com/src/contrib/lubridate_1.5.6.tar.gz \
+RUN wget https://cran.rstudio.com/src/contrib/Archive/lubridate/lubridate_1.5.6.tar.gz \
   && R CMD INSTALL lubridate_1.5.6.tar.gz \
   && rm lubridate_1.5.6.tar.gz
 
