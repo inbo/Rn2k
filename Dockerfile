@@ -150,7 +150,7 @@ RUN apt-get update \
     libodbc1 \
     unixodbc-dev \
   && apt-get clean \
-  && wget https://cran.rstudio.com/src/contrib/RODBC_1.3-13.tar.gz \
+  && wget https://cran.rstudio.com/src/contrib/Archive/RODBC/RODBC_1.3-13.tar.gz \
   && R CMD INSTALL RODBC_1.3-13.tar.gz \
   && rm RODBC_1.3-13.tar.gz
 
