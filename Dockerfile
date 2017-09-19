@@ -3,6 +3,17 @@ FROM ubuntu:17.04
 ## This handle reaches Thierry
 MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
 
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="Rn2k" \
+      org.label-schema.description="A docker image with stable versions of R and a bunch of packages. The full list of packages is available in the README." \
+      org.label-schema.url="e.g. https://www.inbo.be/" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="e.g. https://github.com/inbo/Rn2k" \
+      org.label-schema.vendor="Research Institute for Nature and Forest" \
+      maintainer="Thierry Onkelinx <thierry.onkelinx@inbo.be>"
+
 ## Set a default user. Available via runtime flag `--user docker`
 ## Add user to 'staff' group, granting them write privileges to /usr/local/lib/R/site.library
 ## User should also have & own a home directory (for rstudio or linked volumes to work properly).
