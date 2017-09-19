@@ -38,6 +38,9 @@ RUN apt-get update \
     wget \
   && apt-get clean
 
+## script to install specific R package from CRAN
+COPY cran_install.sh cran_install.sh
+
 ## Install R base
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
