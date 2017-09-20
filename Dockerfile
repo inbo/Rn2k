@@ -214,5 +214,4 @@ RUN  ./cran_install.sh purrr 0.2.2.2 \
 COPY analysis.sh analysis.sh
 COPY analysis.R analysis.R
 
-## Start R
-CMD ["R", "--no-save", "--no-restore"]
+CMD ["/bin/bash"]
