@@ -210,5 +210,9 @@ RUN apt-get update \
 RUN  ./cran_install.sh purrr 0.2.2.2 \
   && ./cran_install.sh dbplyr 1.1.0
 
+## copy analysis script
+COPY analysis.sh analysis.sh
+COPY analysis.R analysis.R
+
 ## Start R
 CMD ["R", "--no-save", "--no-restore"]
