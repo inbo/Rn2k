@@ -22,6 +22,14 @@ RUN useradd docker \
   && chown docker:docker /home/docker \
   && addgroup docker staff
 
+
+## script to install specific R package from CRAN
+COPY cran_install.sh cran_install.sh
+
+## copy analysis script
+COPY analysis.sh analysis.sh
+COPY analysis.R analysis.R
+
 ## Configure default locale, see https://github.com/rocker-org/rocker/issues/19
 RUN apt-get update \
   && apt-get install -y  --no-install-recommends \
@@ -72,9 +80,6 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     r-cran-littler=0.3.2-1zesty0 \
   && apt-get clean
-
-## script to install specific R package from CRAN
-COPY cran_install.sh cran_install.sh
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -215,9 +220,5 @@ RUN apt-get update \
 ## install dbplyr
 RUN  ./cran_install.sh purrr 0.2.2.2 \
   && ./cran_install.sh dbplyr 1.1.0
-
-## copy analysis script
-COPY analysis.sh analysis.sh
-COPY analysis.R analysis.R
 
 CMD ["/bin/bash"]
