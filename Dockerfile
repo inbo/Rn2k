@@ -44,9 +44,6 @@ RUN apt-get update \
     wget \
   && apt-get clean
 
-## script to install specific R package from CRAN
-COPY cran_install.sh cran_install.sh
-
 ## Install R base
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -73,8 +70,11 @@ RUN apt-get update \
 ## Install litter
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    r-cran-littler=0.3.2-1xenial0 \
+    r-cran-littler=0.3.2-1zesty0 \
   && apt-get clean
+
+## script to install specific R package from CRAN
+COPY cran_install.sh cran_install.sh
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
