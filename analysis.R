@@ -1,3 +1,5 @@
-args <- commandArgs(trailingOnly = TRUE)
+#!/usr/bin/env r
+
 library(n2kanalysis)
-fit_model(bucket = args[1], x = args[3], project = args[2])
+cat(argv, sep = "\n")
+fit_model(bucket = argv[1], x = argv[3], project = argv[2])

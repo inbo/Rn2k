@@ -70,6 +70,12 @@ RUN apt-get update \
     r-recommended=3.4.1-2zesty0 \
   && apt-get clean
 
+## Install litter
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    r-cran-littler=0.3.2-1xenial0 \
+  && apt-get clean
+
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     libcurl4-openssl-dev \

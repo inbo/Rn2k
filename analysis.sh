@@ -8,7 +8,7 @@ while getopts b:g:m:p: option; do
   ;;
  g)
   echo installing ${OPTARG}
-  Rscript -e "${FIRST}${OPTARG}${LAST}"
+  r -e "${FIRST}${OPTARG}${LAST}"
   echo ${OPTARG} installed
   ;;
  m)
@@ -20,4 +20,4 @@ while getopts b:g:m:p: option; do
  esac
 done
 
-Rscript 'analysis.R' $BUCKET $PROJECT $MANIFEST
+./analysis.R $BUCKET $PROJECT $MANIFEST
