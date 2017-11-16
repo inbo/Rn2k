@@ -44,10 +44,10 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |            dfoptim |        2016.7-1 | 
 |             digest |          0.6.12 | 
 |         doParallel |          1.0.11 | 
-|              dplyr |           0.7.3 | 
+|              dplyr |           0.7.4 | 
 |            foreach |           1.4.3 | 
 |              git2r |          0.19.0 | 
-|               glue |           1.1.1 | 
+|               glue |           1.2.0 | 
 |           gridBase |           0.4-7 | 
 |               httr |           1.3.1 | 
 |             igraph |           1.1.2 | 
@@ -86,7 +86,7 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |             svUnit |          0.7-12 | 
 |             tibble |           1.3.4 | 
 |              tidyr |           0.7.2 | 
-|         tidyselect |           0.2.0 | 
+|         tidyselect |           0.2.3 | 
 |             ucminf |           1.1-4 | 
 |            whisker |           0.3-2 | 
 |              withr |           2.1.0 | 

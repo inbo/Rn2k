@@ -120,8 +120,8 @@ RUN  ./cran_install.sh Rcpp 0.12.13 \
   && ./cran_install.sh bindr 0.1 \
   && ./cran_install.sh pkgconfig 2.0.1 \
   && ./cran_install.sh bindrcpp 0.2 \
-  && ./cran_install.sh glue 1.1.1 \
-  && ./cran_install.sh dplyr 0.7.3
+  && ./cran_install.sh glue 1.2.0 \
+  && ./cran_install.sh dplyr 0.7.4
 
 ## Install plyr
 RUN  ./cran_install.sh plyr 1.8.4
@@ -171,7 +171,7 @@ ssh -i ~/.aws/inbo-n2kmonitoring-ranalysis.pem -o ProxyCommand='ssh -i ~/.ssh/id
 RUN  ./cran_install.sh sp 1.2-5
 
 ## install tidyr
-RUN  ./cran_install.sh tidyselect 0.2.0 \
+RUN  ./cran_install.sh tidyselect 0.2.3 \
   && ./cran_install.sh tidyr 0.7.2
 
 ## install lme4
@@ -222,5 +222,10 @@ RUN apt-get update \
 ## install dbplyr
 RUN  ./cran_install.sh purrr 0.2.4 \
   && ./cran_install.sh dbplyr 1.1.0
+
+## install htmlwidgets
+RUN  ./cran_install.sh htmltools 0.3.6 \
+  && ./cran_install.sh yaml 2.1.14 \
+  && ./cran_install.sh htmlwidgets 0.9
 
 CMD ["/bin/bash"]
