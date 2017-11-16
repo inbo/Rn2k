@@ -91,31 +91,31 @@ RUN apt-get update \
   && apt-get clean \
   && ./cran_install.sh jsonlite 1.5 \
   && ./cran_install.sh mime 0.5 \
-  && ./cran_install.sh curl 2.8.1 \
+  && ./cran_install.sh curl 3.0 \
   && ./cran_install.sh digest 0.6.12 \
   && ./cran_install.sh R6 2.2.2 \
   && ./cran_install.sh magrittr 1.5 \
   && ./cran_install.sh stringi 1.1.5 \
   && ./cran_install.sh stringr 1.2.0 \
-  && ./cran_install.sh openssl 0.9.6 \
-  && ./cran_install.sh httr 1.2.1 \
+  && ./cran_install.sh openssl 0.9.9 \
+  && ./cran_install.sh httr 1.3.1 \
   && ./cran_install.sh git2r 0.19.0  \
   && ./cran_install.sh memoise 1.1.0 \
   && ./cran_install.sh whisker 0.3-2 \
-  && ./cran_install.sh rstudioapi 0.6 \
-  && ./cran_install.sh withr 1.0.2 \
-  && ./cran_install.sh devtools 1.13.2
+  && ./cran_install.sh rstudioapi 0.7 \
+  && ./cran_install.sh withr 2.1.0 \
+  && ./cran_install.sh devtools 1.13.4
 
 ## Install assertthat
 RUN  ./cran_install.sh assertthat 0.2.0
 
 ## Install dplyr and dependencies
-RUN  ./cran_install.sh Rcpp 0.12.12 \
-  && ./cran_install.sh lazyeval 0.2.0 \
+RUN  ./cran_install.sh Rcpp 0.12.13 \
+  && ./cran_install.sh lazyeval 0.2.1 \
   && ./cran_install.sh DBI 0.7 \
-  && ./cran_install.sh BH 1.62.0-1 \
-  && ./cran_install.sh rlang 0.1.2 \
-  && ./cran_install.sh tibble 1.3.3 \
+  && ./cran_install.sh BH 1.65.0-1 \
+  && ./cran_install.sh rlang 0.1.4 \
+  && ./cran_install.sh tibble 1.3.4 \
   && ./cran_install.sh plogr 0.1-1 \
   && ./cran_install.sh bindr 0.1 \
   && ./cran_install.sh pkgconfig 2.0.1 \
@@ -127,7 +127,7 @@ RUN  ./cran_install.sh Rcpp 0.12.12 \
 RUN  ./cran_install.sh plyr 1.8.4
 
 ## Install lubridate
-RUN  ./cran_install.sh lubridate 1.6.0
+RUN  ./cran_install.sh lubridate 1.7.1
 
 ## Install freetds
 RUN apt-get update \
@@ -162,22 +162,22 @@ RUN  apt-get update \
 ssh -i ~/.aws/inbo-n2kmonitoring-ranalysis.pem -o ProxyCommand='ssh -i ~/.ssh/id_rsa thierry_onkelinx@52.50.109.146 nc %h %p' ubuntu@172.28.13.68
   && ./cran_install.sh iterators 1.0.8 \
   && ./cran_install.sh foreach 1.4.3 \
-  && ./cran_install.sh doParallel 1.0.10 \
+  && ./cran_install.sh doParallel 1.0.11 \
   && ./cran_install.sh NMF 0.20.6 \
-  && ./cran_install.sh irlba 2.2.1 \
+  && ./cran_install.sh irlba 2.3.1 \
   && ./cran_install.sh igraph 1.1.2
 
 ## install sp
 RUN  ./cran_install.sh sp 1.2-5
 
 ## install tidyr
-RUN  ./cran_install.sh tidyr 0.6.3
+RUN  ./cran_install.sh tidyr 0.7.2
 
 ## install lme4
 RUN  ./cran_install.sh minqa 1.2.4 \
   && ./cran_install.sh nloptr 1.0.4 \
   && ./cran_install.sh RcppEigen 0.3.3.3.0 \
-  && ./cran_install.sh lme4 1.1-13
+  && ./cran_install.sh lme4 1.1-14
 
 ## install optimx and dependencies
 RUN  ./cran_install.sh numDeriv 2016.8-1 \
@@ -219,7 +219,7 @@ RUN apt-get update \
   && ./cran_install.sh RPostgreSQL 0.6-2
 
 ## install dbplyr
-RUN  ./cran_install.sh purrr 0.2.2.2 \
+RUN  ./cran_install.sh purrr 0.2.4 \
   && ./cran_install.sh dbplyr 1.1.0
 
 CMD ["/bin/bash"]
