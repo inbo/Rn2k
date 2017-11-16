@@ -49,6 +49,8 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |              git2r |          0.19.0 | 
 |               glue |           1.2.0 | 
 |           gridBase |           0.4-7 | 
+|          htmltools |           0.3.6 | 
+|        htmlwidgets |             0.9 | 
 |               httr |           1.3.1 | 
 |             igraph |           1.1.2 | 
 |              irlba |           2.3.1 | 
@@ -92,3 +94,4 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |              withr |           2.1.0 | 
 |               xml2 |           1.1.1 | 
 |             xtable |           1.8-2 | 
+|               yaml |          2.1.14 | 
