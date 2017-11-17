@@ -223,14 +223,7 @@ RUN apt-get update \
 ## install dbplyr
 RUN  ./cran_install.sh dbplyr 1.1.0
 
-## install htmlwidgets
-RUN  ./cran_install.sh htmltools 0.3.6 \
-  && ./cran_install.sh yaml 2.1.14 \
-  && ./cran_install.sh htmlwidgets 0.9
-
-## Install pandoc
-RUN wget https://github.com/jgm/pandoc/releases/download/2.0.2/pandoc-2.0.2-1-amd64.deb \
-  && dpkg -i pandoc-2.0.2-1-amd64.deb\
-  && rm pandoc-2.0.2-1-amd64.deb
+## install profvis
+RUN  ./cran_install.sh profvis 0.3.3
 
 CMD ["/bin/bash"]
