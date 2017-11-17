@@ -150,7 +150,6 @@ RUN apt-get update \
 ## Install xtable
 RUN  ./cran_install.sh xtable 1.8-2
 
-
 ## Install igraph and its dependencies
 RUN  apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -158,8 +157,7 @@ RUN  apt-get update \
   && ./cran_install.sh registry 0.3 \
   && ./cran_install.sh pkgmaker 0.22 \
   && ./cran_install.sh rngtools 1.2.4 \
-  && ./cran_install.sh gridBase 0.4-7 \ssh -i ~/.aws/inbo-n2kmonitoring-ranalysis.pem -o ProxyCommand='ssh -i ~/.ssh/id_rsa thierry_onkelinx@50.109.146 nc %h %p' ubuntu@172.28.13.68
-ssh -i ~/.aws/inbo-n2kmonitoring-ranalysis.pem -o ProxyCommand='ssh -i ~/.ssh/id_rsa thierry_onkelinx@52.50.109.146 nc %h %p' ubuntu@172.28.13.68
+  && ./cran_install.sh gridBase 0.4-7 \
   && ./cran_install.sh iterators 1.0.8 \
   && ./cran_install.sh foreach 1.4.3 \
   && ./cran_install.sh doParallel 1.0.11 \
@@ -224,6 +222,9 @@ RUN apt-get update \
 RUN  ./cran_install.sh dbplyr 1.1.0
 
 ## install profvis
-RUN  ./cran_install.sh profvis 0.3.3
+RUN  ./cran_install.sh yaml 2.1.14 \
+  && ./cran_install.sh htmltools 0.3.6 \
+  && ./cran_install.sh htmlwidgets 0.9 \
+  && ./cran_install.sh profvis 0.3.3
 
 CMD ["/bin/bash"]
