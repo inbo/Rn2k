@@ -42,7 +42,7 @@ RUN apt-get update \
 RUN apt-get update \
   && apt-get install -y --no-install-recommends dirmngr \
   && apt-get clean \
-  && sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu zesty/" >> /etc/apt/sources.list' \
+  && sh -c 'echo "deb https://cloud.rproject.org/bin/linux/ubuntu zesty/" >> /etc/apt/sources.list' \
   && gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9 \
   && gpg -a --export E084DAB9 | apt-key add -
 
