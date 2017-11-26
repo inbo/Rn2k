@@ -202,9 +202,9 @@ RUN  ./cran_install.sh MatrixModels 0.4-1 \
 RUN  ./cran_install.sh mvtnorm 1.0-6
 
 ## install multimput
-RUN wget https://github.com/inbo/multimput/archive/v0.2.7.tar.gz \
-  && R CMD INSTALL v0.2.7.tar.gz \
-  && rm v0.2.7.tar.gz
+RUN wget https://github.com/inbo/multimput/archive/v0.2.7.9000.tar.gz \
+  && R CMD INSTALL v0.2.7.9000.tar.gz \
+  && rm v0.2.7.9000.tar.gz
 
 ## install aws.s3
 RUN  ./cran_install.sh base64enc 0.1-3 \
