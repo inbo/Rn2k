@@ -55,8 +55,8 @@ RUN apt-get update \
 ## Install R base
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    r-base-core=3.4.2-2zesty \
-    r-base-dev=3.4.2-2zesty \
+    r-base-core=3.4.3-1zesty0 \
+    r-base-dev=3.4.3-1zesty0 \
     r-cran-boot=1.3-20-1zesty0 \
     r-cran-class=7.3-14-2zesty0 \
     r-cran-cluster=2.0.6-2zesty0 \
@@ -71,14 +71,14 @@ RUN apt-get update \
     r-cran-nnet=7.3-12-2zesty0 \
     r-cran-rpart=4.1-11-1zesty0 \
     r-cran-spatial=7.3-11-1zesty0 \
-    r-cran-survival=2.41-3-1zesty0 \
-    r-recommended=3.4.2-2zesty \
+    r-cran-survival=2.41-3-2zesty0 \
+    r-recommended=3.4.3-1zesty0 \
   && apt-get clean
 
 ## Install litter
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    r-cran-littler=0.3.2-1zesty0 \
+    r-cran-littler=0.3.3-1zesty0 \
   && apt-get clean
 
 RUN apt-get update \
@@ -92,7 +92,7 @@ RUN apt-get update \
   && ./cran_install.sh jsonlite 1.5 \
   && ./cran_install.sh mime 0.5 \
   && ./cran_install.sh curl 3.0 \
-  && ./cran_install.sh digest 0.6.12 \
+  && ./cran_install.sh digest 0.6.14 \
   && ./cran_install.sh R6 2.2.2 \
   && ./cran_install.sh magrittr 1.5 \
   && ./cran_install.sh stringi 1.1.5 \
@@ -110,7 +110,7 @@ RUN apt-get update \
 RUN  ./cran_install.sh assertthat 0.2.0
 
 ## Install dplyr and dependencies
-RUN  ./cran_install.sh Rcpp 0.12.13 \
+RUN  ./cran_install.sh Rcpp 0.12.14 \
   && ./cran_install.sh lazyeval 0.2.1 \
   && ./cran_install.sh DBI 0.7 \
   && ./cran_install.sh BH 1.65.0-1 \
@@ -154,7 +154,7 @@ RUN  ./cran_install.sh xtable 1.8-2
 RUN  apt-get update \
   && apt-get install -y --no-install-recommends \
     libxml2-dev \
-  && ./cran_install.sh registry 0.3 \
+  && ./cran_install.sh registry 0.5 \
   && ./cran_install.sh pkgmaker 0.22 \
   && ./cran_install.sh rngtools 1.2.4 \
   && ./cran_install.sh gridBase 0.4-7 \
@@ -176,7 +176,7 @@ RUN  ./cran_install.sh purrr 0.2.4 \
 ## install lme4
 RUN  ./cran_install.sh minqa 1.2.4 \
   && ./cran_install.sh nloptr 1.0.4 \
-  && ./cran_install.sh RcppEigen 0.3.3.3.0 \
+  && ./cran_install.sh RcppEigen 0.3.3.3.1 \
   && ./cran_install.sh lme4 1.1-14
 
 ## install optimx and dependencies
@@ -202,9 +202,9 @@ RUN  ./cran_install.sh MatrixModels 0.4-1 \
 RUN  ./cran_install.sh mvtnorm 1.0-6
 
 ## install multimput
-RUN wget https://github.com/inbo/multimput/archive/v0.2.7.9000.tar.gz \
-  && R CMD INSTALL v0.2.7.9000.tar.gz \
-  && rm v0.2.7.9000.tar.gz
+RUN wget https://github.com/inbo/multimput/archive/v0.2.8.1.tar.gz \
+  && R CMD INSTALL v0.2.8.1.tar.gz \
+  && rm v0.2.8.1.tar.gz
 
 ## install aws.s3
 RUN  ./cran_install.sh base64enc 0.1-3 \
