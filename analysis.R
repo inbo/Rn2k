@@ -1,12 +1,28 @@
 #!/usr/bin/env r
 
+cat("\n")
+y <- as.list(gsub("--(.*)=(.*)", "\\2", argv))
+names(y) <- gsub("--(.*)=(.*)", "\\1", argv)
 library(n2kanalysis)
-cat(argv, sep = "\n")
 p <- profvis::profvis({
-  fit_model(bucket = argv[1], x = argv[3], project = argv[2])
+  do.call(
+    function(bucket, project, x, timeout) {
+      if (missing(timeout)) {
+        fit_model(bucket = bucket, x = x, project = project)
+      } else {
+        fit_model(
+          bucket = bucket,
+          x = x,
+          project = project,
+          timeout = as.integer(timeout)
+        )
+      }
+    },
+    y
+  )
 })
 aws.s3::s3saveRDS(
   p,
-  object = sprintf("%s/profile/%s", argv[2], gsub("manifest", "rds", argv[3])),
-  bucket = argv[1]
+  object = sprintf("%s/profile/%s", y[["project"]], gsub("manifest", "rds", y[["x"]])),
+  bucket = y[["bucket"]]
 )

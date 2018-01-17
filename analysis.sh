@@ -1,10 +1,10 @@
 #!/bin/bash
 FIRST="devtools::install_github(\""
 LAST="\", dependencies = FALSE, upgrade_dependencies = FALSE)"
-while getopts b:g:m:p: option; do
+while getopts b:g:m:p:t: option; do
  case $option in
  b)
-  BUCKET=${OPTARG}
+  BUCKET="--bucket=${OPTARG}"
   ;;
  g)
   echo installing ${OPTARG}
@@ -12,12 +12,15 @@ while getopts b:g:m:p: option; do
   echo ${OPTARG} installed
   ;;
  m)
-  MANIFEST=${OPTARG}
+  MANIFEST="--x=${OPTARG}"
   ;;
  p)
-  PROJECT=${OPTARG}
+  PROJECT="--project=${OPTARG}"
+  ;;
+ t)
+  TIMEOUT="--timeout=${OPTARG}"
   ;;
  esac
 done
 
-./analysis.R $BUCKET $PROJECT $MANIFEST
+./analysis.R $BUCKET $PROJECT $MANIFEST $TIMEOUT
