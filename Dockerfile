@@ -203,6 +203,14 @@ RUN  ./cran_install.sh numDeriv 2016.8-1 \
   && ./cran_install.sh svUnit 0.7-12 \
   && ./cran_install.sh optimx 2013.8.7
 
+## install shiny
+RUN  ./cran_install.sh later 0.7.4 \
+  && ./cran_install.sh promises 1.0.1 \
+  && ./cran_install.sh httpuv 1.4.5 \
+  && ./cran_install.sh sourcetools 0.1.7 \
+  && ./cran_install.sh htmltools 0.3.6 \
+  && ./cran_install.sh shiny 1.1.0
+
 ## install INLA
 RUN  ./cran_install.sh MatrixModels 0.4-1 \
   && wget https://github.com/inbo/INLA/archive/v18.07.12.tar.gz \
@@ -234,7 +242,6 @@ RUN  ./cran_install.sh dbplyr 1.2.2
 
 ## install profvis
 RUN  ./cran_install.sh yaml 2.2.0 \
-  && ./cran_install.sh htmltools 0.3.6 \
   && ./cran_install.sh htmlwidgets 1.2 \
   && ./cran_install.sh profvis 0.3.5
 
