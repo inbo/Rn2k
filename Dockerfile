@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:18.04
 
 ## This handle reaches Thierry
 MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
@@ -13,6 +13,10 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="e.g. https://github.com/inbo/Rn2k" \
       org.label-schema.vendor="Research Institute for Nature and Forest" \
       maintainer="Thierry Onkelinx <thierry.onkelinx@inbo.be>"
+
+## for apt to be noninteractive
+ENV DEBIAN_FRONTEND noninteractive
+ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 ## Set a default user. Available via runtime flag `--user docker`
 ## Add user to 'staff' group, granting them write privileges to /usr/local/lib/R/site.library
@@ -40,11 +44,11 @@ RUN apt-get update \
 
 ## Add apt-get repositories
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends dirmngr \
-  && apt-get clean \
-  && sh -c 'echo "deb http://cloud.r-project.org/bin/linux/ubuntu zesty/" >> /etc/apt/sources.list' \
-  && gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9 \
-  && gpg -a --export E084DAB9 | apt-key add -
+  && apt-get install -y --no-install-recommends \
+    gnupg \
+    ca-certificates \
+  && sh -c 'echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" >> /etc/apt/sources.list' \
+  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0x51716619e084dab9
 
 ## Install wget
 RUN apt-get update \
@@ -55,30 +59,29 @@ RUN apt-get update \
 ## Install R base
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    r-base-core=3.4.2-2zesty \
-    r-base-dev=3.4.2-2zesty \
-    r-cran-boot=1.3-20-1zesty0 \
-    r-cran-class=7.3-14-2zesty0 \
-    r-cran-cluster=2.0.6-2zesty0 \
-    r-cran-codetools=0.2-15-1 \
-    r-cran-foreign=0.8.69-1zesty0 \
-    r-cran-kernsmooth=2.23-15-3zesty0 \
-    r-cran-lattice=0.20-35-1zesty0 \
-    r-cran-mass=7.3-47-1zesty0 \
-    r-cran-matrix=1.2-11-1zesty0 \
-    r-cran-mgcv=1.8-22-1zesty0 \
-    r-cran-nlme=3.1.131-3zesty0 \
-    r-cran-nnet=7.3-12-2zesty0 \
-    r-cran-rpart=4.1-11-1zesty0 \
-    r-cran-spatial=7.3-11-1zesty0 \
-    r-cran-survival=2.41-3-1zesty0 \
-    r-recommended=3.4.2-2zesty \
-  && apt-get clean
+    r-base-core=3.5.1-1bionic \
+    r-base-dev=3.5.1-1bionic \
+    r-cran-boot=1.3-20-1.1cranBionic0 \
+    r-cran-class=7.3-14-2cranArtful0~ubuntu18.04.1~ppa1 \
+    r-cran-cluster=2.0.7-1-1cranBionic0 \
+    r-cran-codetools=0.2-15-1.1cranBionic0 \
+    r-cran-foreign=0.8.70-1cranArtful0~ubuntu18.04.1~ppa1 \
+    r-cran-kernsmooth=2.23-15-3cranArtful0~ubuntu18.04.1~ppa1 \
+    r-cran-lattice=0.20-35-1cranBionic0 \
+    r-cran-mass=7.3-50-1bionic0 \
+    r-cran-matrix=1.2-14-1cranBionic0 \
+    r-cran-mgcv=1.8-24-1bionic0 \
+    r-cran-nlme=3.1.137-1cranBionic0 \
+    r-cran-nnet=7.3-12-2cranArtful0~ubuntu18.04.1~ppa1 \
+    r-cran-rpart=4.1-13-1cranBionic0  \
+    r-cran-spatial=7.3-11-2cranArtful0~ubuntu18.04.1~ppa1 \
+    r-cran-survival=2.42-6-1cran1bionic0 \
+    r-recommended=3.5.1-1bionic
 
 ## Install litter
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    r-cran-littler=0.3.2-1zesty0 \
+    littler=0.3.4-1bionic0 \
   && apt-get clean
 
 RUN apt-get update \
