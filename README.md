@@ -43,6 +43,9 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |             bibtex |           0.4.2 | 
 |              bindr |           0.1.1 | 
 |           bindrcpp |           0.2.2 | 
+|                bit |          1.1-14 | 
+|              bit64 |           0.9-7 | 
+|               blob |           1.1.1 | 
 |              callr |           3.1.1 | 
 |                cli |           1.0.1 | 
 |              clipr |           0.5.0 | 
@@ -66,6 +69,7 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |               glue |           1.3.1 | 
 |           gridBase |           0.4-7 | 
 |             gtable |           0.2.0 | 
+|                hms |           0.4.2 | 
 |          htmltools |           0.3.6 | 
 |        htmlwidgets |             1.3 | 
 |             httpuv |         1.4.5.1 | 
@@ -90,6 +94,7 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |            mvtnorm |          1.0-10 | 
 |             nloptr |           1.2.1 | 
 |           numDeriv |        2016.8-1 | 
+|               odbc |           1.1.6 | 
 |            openssl |           1.2.2 | 
 |          optextras |        2016-8.8 | 
 |             optimx |       2018-7.10 | 

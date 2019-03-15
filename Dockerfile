@@ -48,7 +48,8 @@ RUN apt-get update \
     gnupg \
     ca-certificates \
   && sh -c 'echo "deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/" >> /etc/apt/sources.list' \
-  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0x51716619e084dab9
+  && gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 \
+  && gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | apt-key add -
 
 ## Install wget
 RUN apt-get update \
