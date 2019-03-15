@@ -281,4 +281,7 @@ RUN  ./cran_install.sh blob 1.1.1 \
   && ./cran_install.sh hms 0.4.2 \
   && ./cran_install.sh odbc 1.1.6
 
+## Install git2rdata
+RUN Rscript -e 'devtools::install_github("inbo/git2rdata@v0.0.3", dependencies = FALSE, upgrade_dependencies = FALSE, keep_source = FALSE)'
+
 CMD ["/bin/bash"]

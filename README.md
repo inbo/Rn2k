@@ -3,7 +3,7 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 
 | Available software | Version         |
 | ------------------ | --------------- |
-|             Ubuntu |           17.04 |
+|             Ubuntu |           18.04 |
 |                  R |           3.5.3 | 
 |         KernSmooth |         2.23-15 | 
 |               MASS |        7.3-51.1 | 
@@ -66,6 +66,7 @@ A stable Docker image with R. The version of most software is hard-coded. This i
 |            ggplot2 |           3.1.0 | 
 |                 gh |           1.0.1 | 
 |              git2r |          0.24.0 | 
+|          git2rdata |           0.0.3 | 
 |               glue |           1.3.1 | 
 |           gridBase |           0.4-7 | 
 |             gtable |           0.2.0 | 
