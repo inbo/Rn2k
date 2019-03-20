@@ -284,4 +284,8 @@ RUN  ./cran_install.sh blob 1.1.1 \
 ## Install git2rdata
 RUN Rscript -e 'devtools::install_github("inbo/git2rdata@v0.0.3", dependencies = FALSE, upgrade_dependencies = FALSE, keep_source = FALSE)'
 
+## copy fit single model script
+COPY fit_model.sh fit_model.sh
+COPY fit_model.R fit_model.R
+
 CMD ["/bin/bash"]
