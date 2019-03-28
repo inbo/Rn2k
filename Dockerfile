@@ -116,7 +116,7 @@ RUN apt-get update \
   && ./cran_install.sh ps 1.3.0 \
   && ./cran_install.sh processx 3.3.0 \
   && ./cran_install.sh callr 3.1.1 \
-  && ./cran_install.sh assertthat 0.2.0 \
+  && ./cran_install.sh assertthat 0.2.1 \
   && ./cran_install.sh crayon 1.3.4 \
   && ./cran_install.sh cli 1.0.1 \
   && ./cran_install.sh backports 1.1.3 \
