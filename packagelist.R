@@ -4,6 +4,7 @@ rec <- rec[order(rownames(rec)), ]
 other <- subset(tmp, is.na(tmp[, "Priority"]))
 other <- other[order(rownames(other)), ]
 tmp2 <- rbind(
+  Ubuntu = gsub("Ubuntu ", "", sessionInfo()$running),
   R = c(paste(version$major, version$minor, sep = ".")),
   rec,
   other
