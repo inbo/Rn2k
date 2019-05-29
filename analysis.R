@@ -3,7 +3,7 @@
 library(n2kanalysis)
 cat(argv, sep = "\n")
 p <- profvis::profvis({
-  fit_model(bucket = argv[1], x = argv[3], project = argv[2])
+  fit_model(bucket = argv[1], x = argv[3], project = argv[2], bash = TRUE)
 })
 aws.s3::s3saveRDS(
   p,
