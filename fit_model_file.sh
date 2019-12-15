@@ -1,10 +1,10 @@
 #!/bin/bash
-FIRST="devtools::install_github(\""
+FIRST="remotes::install_github(\""
 LAST="\", dependencies = FALSE, upgrade_dependencies = FALSE)"
 while getopts b:g:m:p: option; do
  case $option in
  b)
-  BUCKET=${OPTARG}
+  BASE=${OPTARG}
   ;;
  g)
   echo installing ${OPTARG}
@@ -20,4 +20,4 @@ while getopts b:g:m:p: option; do
  esac
 done
 
-./fit_model.R $BUCKET $PROJECT $MODEL
+./fit_model_file.R $BASE $PROJECT $MODEL

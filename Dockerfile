@@ -333,7 +333,9 @@ RUN ./cran_install.sh hms 0.5.2 \
  && ./cran_install.sh odbc 1.2.1
 
 ## copy fit single model script
-COPY fit_model.sh fit_model.sh
-COPY fit_model.R fit_model.R
+COPY fit_model_aws.sh fit_model_aws.sh
+COPY fit_model_aws.R fit_model_aws.R
+COPY fit_model_file.sh fit_model_file.sh
+COPY fit_model_file.R fit_model_file.R
 
 CMD ["/bin/bash"]
