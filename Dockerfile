@@ -50,6 +50,7 @@ RUN  apt-get update \
     pkg-config \
     tdsodbc \
     unixodbc-dev \
+    zlib1g-dev \
   && apt-get clean
 
 RUN  Rscript -e 'install.packages("renv")' \
@@ -62,5 +63,7 @@ COPY renv.lock /analysis/renv.lock
 
 RUN  cd /analysis \
   && Rscript -e 'renv::restore(prompt = FALSE)'
+
+COPY fit_model* /analysis/
 
 CMD ["/bin/bash"]
