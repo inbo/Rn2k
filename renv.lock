@@ -85,6 +85,16 @@
       "Hash": "0828c72369b683873ecbaaeb4fcc0aec",
       "Requirements": []
     },
+    "RPostgreSQL": {
+      "Package": "RPostgreSQL",
+      "Version": "0.7-3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d1258c16d609c27a3ba022d50c054b34",
+      "Requirements": [
+        "DBI"
+      ]
+    },
     "Rcpp": {
       "Package": "Rcpp",
       "Version": "1.0.8",
@@ -618,6 +628,29 @@
       "Hash": "7e6ee68a01d6c87c69087d4a250ee763",
       "Requirements": [
         "tmvnsim"
+      ]
+    },
+    "multimput": {
+      "Package": "multimput",
+      "Version": "0.2.10",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "inbo",
+      "RemoteRepo": "multimput",
+      "RemoteRef": "main",
+      "RemoteSha": "3eb0e9dfc39b84f8a532ced151152564852a846e",
+      "Hash": "c43de6b3d7bb47e31c9c97d4e043f0b7",
+      "Requirements": [
+        "assertthat",
+        "digest",
+        "dplyr",
+        "lme4",
+        "mvtnorm",
+        "purrr",
+        "rlang",
+        "tibble",
+        "tidyr"
       ]
     },
     "munsell": {

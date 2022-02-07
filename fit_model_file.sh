@@ -20,4 +20,4 @@ while getopts b:g:m:p: option; do
  esac
 done
 
-./fit_model_file.R $BASE $PROJECT $MODEL
+Rscript ./fit_model_file.R $BASE $PROJECT $MODEL

@@ -66,4 +66,6 @@ RUN  cd /analysis \
 
 COPY fit_model* /analysis/
 
+
+WORKDIR /analysis
 CMD ["/bin/bash"]
