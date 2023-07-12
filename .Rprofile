@@ -1,3 +1,4 @@
+source("renv/activate.R")
 options(
   papersize = "a4",
   tab.width = 2,
