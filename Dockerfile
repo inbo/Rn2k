@@ -42,10 +42,17 @@ RUN  apt-get update \
     freetds-dev \
     freetds-bin \
     libcurl4-openssl-dev \
+    libfontconfig1-dev \
+    libfribidi-dev \
+    libgdal-dev \
+    libgeos-dev \
+    libharfbuzz-dev \
     libltdl7 \
     libodbc1 \
     libpq-dev \
+    libproj-dev \
     libssl-dev \
+    libudunits2-dev \
     libxml2-dev \
     pkg-config \
     tdsodbc \
