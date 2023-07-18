@@ -1230,8 +1230,14 @@
     "n2kanalysis": {
       "Package": "n2kanalysis",
       "Version": "0.3.1",
-      "Source": "Repository",
-      "Repository": "https://inbo.r-universe.dev",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "inbo",
+      "RemoteRepo": "n2kanalysis",
+      "RemoteRef": "main",
+      "RemoteSha": "5bfa8d14e3941544e43baf43f17b900cb7e84253",
+      "Remotes": "inbo/multimput, inbo/n2khelper",
       "Requirements": [
         "MASS",
         "R",
@@ -1250,7 +1256,7 @@
         "tidyr",
         "yaml"
       ],
-      "Hash": "04a04375561e23024df601566dab89f9"
+      "Hash": "87feb55de7f66e5d2a453a9cf9bfe8e6"
     },
     "n2khelper": {
       "Package": "n2khelper",

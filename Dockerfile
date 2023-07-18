@@ -60,6 +60,7 @@ RUN  Rscript -e 'install.packages("renv")' \
 
 COPY .Rprofile $R_HOME/etc/Rprofile.site
 COPY renv.lock /analysis/renv.lock
+COPY renv/activate.R /analysis/renv/activate.R
 
 RUN  cd /analysis \
   && Rscript -e 'renv::restore(prompt = FALSE)'
