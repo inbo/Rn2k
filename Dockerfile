@@ -41,6 +41,7 @@ RUN  apt-get update \
     cmake \
     freetds-dev \
     freetds-bin \
+    iproute2 \
     libcurl4-openssl-dev \
     libfontconfig1-dev \
     libfribidi-dev \
@@ -73,7 +74,6 @@ RUN  cd /analysis \
   && Rscript -e 'renv::restore(prompt = FALSE)'
 
 COPY fit_model* /analysis/
-
 
 WORKDIR /analysis
 CMD ["/bin/bash"]
