@@ -1,4 +1,3 @@
-source("renv/activate.R")
 options(
   papersize = "a4",
   tab.width = 2,
@@ -10,6 +9,7 @@ options(
   yaml.eval.expr = TRUE,
   repos = c(
     CRAN = "https://cloud.r-project.org/",
+    INBO = "https://inbo.r-universe.dev",
     INLA = "https://inla.r-inla-download.org/R/testing"
   ),
   install.packages.check.source = "yes",
