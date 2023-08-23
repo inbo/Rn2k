@@ -165,7 +165,10 @@ RUN Rscript -e 'remotes::install_version("yaml", version = "2.3.7")'
 RUN Rscript -e 'remotes::install_version("n2kanalysis", version = "0.3.1")'
 # packages end
 
-COPY fit_model* /analysis/
+COPY fit_model_aws.R /analysis/fit_model_aws.R
+COPY fit_model_aws.sh /analysis/fit_model_aws.sh
+COPY fit_model_file.R /analysis/fit_model_file.R
+COPY fit_model_file.sh /analysis/fit_model_file.sh
 
 WORKDIR /analysis
 CMD ["/bin/bash"]
