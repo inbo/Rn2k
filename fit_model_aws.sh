@@ -31,5 +31,5 @@ while getopts "b:g:m:p:s:" option; do
   esac
 done
 
-./fit_model_aws.R $BUCKET $PROJECT $MODEL &
+nice 19 ./fit_model_aws.R $BUCKET $PROJECT $MODEL &
 wait

@@ -157,12 +157,12 @@ RUN Rscript -e 'remotes::install_version("xml2", version = "1.3.5")'
 RUN Rscript -e 'remotes::install_version("INLA", version = "23.06.29")'
 RUN Rscript -e 'remotes::install_version("aws.s3", version = "0.3.21")'
 RUN Rscript -e 'remotes::install_version("littler", version = "0.3.18")'
-RUN Rscript -e 'remotes::install_version("multimput", version = "0.2.12")'
-RUN Rscript -e 'remotes::install_version("n2khelper", version = "0.5.0")'
+RUN Rscript -e 'remotes::install_github("inbo/multimput@v0.2.12", dependencies = FALSE)'
+RUN Rscript -e 'remotes::install_github("inbo/n2khelper@v0.5.0", dependencies = FALSE)'
 RUN Rscript -e 'remotes::install_version("sn", version = "2.1.1")'
 RUN Rscript -e 'remotes::install_version("testthat", version = "3.1.10")'
 RUN Rscript -e 'remotes::install_version("yaml", version = "2.3.7")'
-RUN Rscript -e 'remotes::install_version("n2kanalysis", version = "0.3.1")'
+RUN Rscript -e 'remotes::install_github("inbo/n2kanalysis@v0.3.1", dependencies = FALSE)'
 # packages end
 
 COPY fit_model_aws.R /analysis/fit_model_aws.R
