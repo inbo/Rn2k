@@ -10,7 +10,7 @@ options(
   repos = c(
     CRAN = "https://cloud.r-project.org/",
     INBO = "https://inbo.r-universe.dev",
-    INLA = "https://inla.r-inla-download.org/R/testing"
+    INLA = "https://inla.r-inla-download.org/R/stable"
   ),
   install.packages.check.source = "yes",
   install.packages.compile.from.source = "always",
