@@ -1,2 +1,2 @@
 library(pak)
-lockfile_create(pkg = "n2kanalysis")
+lockfile_create(pkg = c("n2kanalysis", "INLA", "git2rdata"))
