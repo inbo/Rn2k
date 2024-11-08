@@ -12,11 +12,11 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="e.g. https://github.com/inbo/Rn2k" \
       org.label-schema.vendor="Research Institute for Nature and Forest" \
-      maintainer="Thierry Onkelinx <thierry.onkelinx@inbo.be>"
+      org.opencontainers.image.authors="Thierry Onkelinx <thierry.onkelinx@inbo.be>"
 
 ## for apt to be noninteractive
-ENV DEBIAN_FRONTEND noninteractive
-ENV DEBCONF_NONINTERACTIVE_SEEN true
+ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBCONF_NONINTERACTIVE_SEEN=true
 
 ## Set a default user. Available via runtime flag `--user docker`
 ## Add user to 'staff' group, granting them write privileges to /usr/local/lib/R/site.library
