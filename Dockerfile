@@ -1,8 +1,5 @@
 FROM rocker/r-ver:4.4.1
 
-## This handle reaches Thierry
-MAINTAINER "Thierry Onkelinx" thierry.onkelinx@inbo.be
-
 ARG BUILD_DATE
 ARG VCS_REF
 LABEL org.label-schema.build-date=$BUILD_DATE \
