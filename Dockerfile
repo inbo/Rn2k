@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.4.1
+FROM rocker/r-ver:4.4.2
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -21,7 +21,7 @@ ENV DEBCONF_NONINTERACTIVE_SEEN=true
 RUN useradd docker \
   && mkdir /home/docker \
   && chown docker:docker /home/docker \
-  && addgroup docker staff
+  && usermod -a -G staff docker
 
 ## Install nano
 RUN apt-get update \
@@ -33,38 +33,36 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     wget
 
-RUN  apt-get update \
-  && apt-get install -y --no-install-recommends \
-    cmake \
-    freetds-dev \
-    freetds-bin \
-    iproute2 \
-    libcurl4-openssl-dev \
-    libfontconfig1-dev \
-    libfribidi-dev \
-    libgdal-dev \
-    libgeos-dev \
-    libharfbuzz-dev \
-    libltdl7 \
-    libodbc1 \
-    libpq-dev \
-    libproj-dev \
-    libssl-dev \
-    libudunits2-dev \
-    libxml2-dev \
-    pkg-config \
-    tdsodbc \
-    unixodbc-dev \
-    zlib1g-dev \
-  && apt-get clean
 
 COPY .Rprofile $R_HOME/etc/Rprofile.site
 
+RUN  apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libcurl4-openssl-dev \
+  && apt-get clean
+
 RUN Rscript -e 'install.packages("pak")'
+
+RUN  apt-get update \
+  && apt-get install -y --no-install-recommends \
+    cmake \
+    gdal-bin \
+    libcurl4-openssl-dev \
+    libgdal-dev \
+    libgeos-dev \
+    libgit2-dev \
+    libicu-dev \
+    libproj-dev \
+    libsqlite3-dev \
+    libssl-dev \
+    libudunits2-dev \
+    libxml2-dev \
+    make \
+    unixodbc-dev \
+  && apt-get clean
+
 COPY pkg.lock pkg.lock
 RUN Rscript -e 'pak::lockfile_install()'
-# packages start
-# packages end
 
 COPY fit_model_aws.R /analysis/fit_model_aws.R
 COPY fit_model_aws.sh /analysis/fit_model_aws.sh
