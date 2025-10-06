@@ -1,3 +1,4 @@
+source("renv/activate.R")
 options(
   papersize = "a4",
   tab.width = 2,
@@ -9,7 +10,6 @@ options(
   yaml.eval.expr = TRUE,
   repos = c(
     CRAN = "https://cloud.r-project.org/",
-    INBO = "https://inbo.r-universe.dev",
     INLA = "https://inla.r-inla-download.org/R/stable"
   ),
   install.packages.check.source = "yes",
@@ -17,7 +17,8 @@ options(
   rgdal_show_exportToProj4_warnings = "none",
   useFancyQuotes = FALSE,
   HTTPUserAgent = sprintf(
-    "R/%s R (%s)", getRversion(),
+    "R/%s R (%s)",
+    getRversion(),
     paste(getRversion(), R.version$platform, R.version$arch, R.version$os)
   )
 )
