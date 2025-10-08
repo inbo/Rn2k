@@ -1,6 +1,4 @@
-source("renv/activate.R")
 options(
-  papersize = "a4",
   tab.width = 2,
   width = 80,
   help_type = "html",
